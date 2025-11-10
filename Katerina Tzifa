@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Katerina Tzifa — Independent Travel Advisor | Join My Team</title>
+  <meta name="description" content="Katerina Tzifa, mum of 3 and independent travel advisor. Helping people find freedom through flexible travel income and a supportive business opportunity."/>
+  <meta name="keywords" content="travel advisor, travel business opportunity, work from home, travel discounts, travel network, flexible income" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2300b8d4'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='sans-serif'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Primary colors: aqua theme (customize in :root) -->
+  <style>
+    :root{
+      --aqua: #00B8D4; /* main accent */
+      --aqua-dark: #0096b0;
+      --muted: #58707a;
+      --bg: #f7fbfc;
+      --card: #ffffff;
+      --radius: 12px;
+      --maxwidth: 1100px;
+      --content-padding: 22px;
+      --shadow: 0 6px 20px rgba(8,20,25,0.06);
+      --accent-contrast: #002b33;
+      --success: #24b47e;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Reset */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg, var(--bg), #eef8fa 80%);
+      color: #042028;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Layout */
+    .wrap{
+      max-width:var(--maxwidth);
+      margin:28px auto;
+      padding:0 20px;
+    }
+
+    header.top{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .avatar{
+      width:64px;
+      height:64px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--aqua),var(--aqua-dark));
+      display:inline-grid;
+      place-items:center;
+      box-shadow: var(--shadow);
+      flex-shrink:0;
+      border:4px solid rgba(255,255,255,0.7);
+    }
+    .avatar svg{width:48px;height:48px}
+
+    .brand h1{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-0.2px;
+    }
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav.actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .btn{
+      border:0;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:600;
+      cursor:pointer;
+    }
+    .btn-primary{
+      background:var(--aqua);
+      color:white;
+      box-shadow: 0 6px 18px rgba(0,184,212,0.18);
+    }
+    .btn-ghost{
+      background:transparent;
+      color:var(--accent-contrast);
+    }
+
+    /* Hero */
+    .hero{
+      background:linear-gradient(90deg, rgba(0,184,212,0.06), rgba(0,184,212,0.02));
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:22px;
+      align-items:center;
+    }
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr; text-align:center}
+    }
+    .hero .intro h2{
+      margin:0 0 10px 0;
+      font-size:28px;
+      line-height:1.05;
+    }
+    .tag{
+      display:inline-block;
+      background:rgba(0,184,212,0.12);
+      color:var(--aqua-dark);
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:13px;
+      margin-bottom:12px;
+    }
+    .lead{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+    .kpis{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+    .kpi{
+      background:var(--card);
+      padding:12px 14px;
+      border-radius:10px;
+      min-width:120px;
+      box-shadow:var(--shadow);
+    }
+    .kpi strong{display:block;font-size:18px}
+    .hero-card{
+      background:var(--card);
+      padding:16px;
+      border-radius:10px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+    .hero-card p{margin:8px 0 14px 0;color:var(--muted)}
+
+    /* Sections */
+    section{
+      margin-top:18px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:22px;
+    }
+    @media (max-width:880px){
+      .grid-2{grid-template-columns:1fr}
+    }
+    .card{
+      background:var(--card);
+      padding:var(--content-padding);
+      border-radius:12px;
+      box-shadow:var(--shadow);
+    }
+
+    .benefits{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (max-width:880px){ .benefits{grid-template-columns:repeat(1,1fr)} }
+    .benefit{
+      padding:12px;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(0,184,212,0.04), rgba(0,184,212,0.02));
+      border:1px solid rgba(0,184,212,0.06);
+    }
+
+    .steps{list-style:none;padding:0;margin:0}
+    .steps li{padding:12px 0;border-bottom:1px dashed rgba(6,20,22,0.06)}
+    .steps li:last-child{border-bottom:0}
+
+    /* Testimonials */
+    .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    @media (max-width:880px){ .test-grid{grid-template-columns:1fr} }
+    blockquote{margin:0;padding:12px;background:#f2fbfc;border-left:4px solid rgba(0,184,212,0.2);border-radius:8px}
+
+    footer{
+      margin:28px 0 70px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Contact form */
+    .form-row{display:flex;gap:10px}
+    .form-row .col{flex:1}
+    input[type="text"], input[type="email"], textarea, select{
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid #d9eef0;
+      font-size:14px;
+    }
+    textarea{min-height:110px;resize:vertical}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* subtle link style */
+    a{color:var(--aqua-dark);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Utility */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+  </style>
+
+  <!-- Structured data (Business Opportunity / Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Katerina Tzifa",
+    "jobTitle": "Independent Travel Advisor",
+    "description": "Mum of 3 and independent travel advisor helping people find freedom through flexible travel income and a supportive business opportunity.",
+    "url":"#"
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap" role="main">
+
+    <!-- Header -->
+    <header class="top" aria-label="Main header">
+      <div class="brand">
+        <!-- SVG circular avatar placeholder: replace with <img src="YOUR_URL" alt="Katerina"> if you have a photo -->
+        <div class="avatar" aria-hidden="true">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Avatar">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#00B8D4"/><stop offset="1" stop-color="#0096b0"/>
+              </linearGradient>
+            </defs>
+            <rect width="100" height="100" rx="50" fill="url(#g)"></rect>
+            <text x="50" y="60" text-anchor="middle" font-family="sans-serif" font-size="46" fill="white">KT</text>
+          </svg>
+        </div>
+        <div>
+          <h1>Katerina Tzifa</h1>
+          <p class="muted">Mum of 3 — Independent Travel Advisor helping people to find their freedom</p>
+        </div>
+      </div>
+
+      <nav class="actions" aria-label="Top actions">
+        <button class="btn btn-ghost" onclick="scrollToSection('about')">About</button>
+        <button class="btn btn-ghost" onclick="scrollToSection('opportunity')">Opportunity</button>
+        <button class="btn btn-primary" id="cta-top" onclick="openCTA()">Learn more about the opportunity</button>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="intro">
+        <span class="tag">Business Opportunity</span>
+        <h2 id="hero-heading">Flexible travel income that fits family life — join a proven travel network.</h2>
+        <p class="lead">I’m Katerina — a mum of three who built a flexible travel advisory business. I coach people to earn extra income, access exclusive travel benefits, and create true lifestyle freedom without sacrificing family time.</p>
+
+        <div class="kpis" aria-hidden="true">
+          <div class="kpi"><strong>Flexible hours</strong><span class="small muted">Work from home on your schedule</span></div>
+          <div class="kpi"><strong>Travel perks</strong><span class="small muted">Exclusive discounts & upgrades</span></div>
+          <div class="kpi"><strong>Supportive team</strong><span class="small muted">Mentorship, training, & community</span></div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <button class="btn btn-primary" onclick="openCTA()">Learn more about the opportunity</button>
+          <button class="btn btn-ghost" onclick="scrollToSection('contact')">Contact me</button>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-labelledby="hero-card-title">
+        <h3 id="hero-card-title">Ready to explore?</h3>
+        <p class="muted">No experience required. We provide training, tools, and a community to help you succeed.</p>
+        <ul class="steps">
+          <li><strong>Step 1:</strong> Discover if this fits your goals (chat or quick call)</li>
+          <li><strong>Step 2:</strong> Join and complete guided onboarding</li>
+          <li><strong>Step 3:</strong> Start booking & earning with coaching</li>
+        </ul>
+        <div style="margin-top:12px">
+          <button class="btn btn-primary" onclick="openCTA()">Learn more about the opportunity</button>
+        </div>
+      </aside>
+    </section>
+
+    <!-- About / Elevator pitch -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="grid-2">
+        <div class="card">
+          <h3 id="about-title">About me — Katerina</h3>
+          <p class="muted">I built this business around family life — flexible hours, genuine travel perks, and a supportive team. I partner with people who want to:</p>
+          <ul>
+            <li>Top-up household income without full-time hours</li>
+            <li>Access travel discounts for family holidays</li>
+            <li>Grow at their own pace with mentorship</li>
+          </ul>
+
+          <h4 style="margin-top:12px">Who this is for</h4>
+          <ul>
+            <li>Parents wanting flexible, meaningful work</li>
+            <li>People who love travel and helping others</li>
+            <li>Those seeking a low-startup, home-based opportunity</li>
+          </ul>
+
+          <p class="small muted" style="margin-top:12px">Replace this text with a short personal story: how you started, a real success story, or why family freedom matters to you.</p>
+        </div>
+
+        <aside class="card" aria-label="Quick facts">
+          <h4>Quick Facts</h4>
+          <p><strong>Location:</strong> Remote / UK-friendly</p>
+          <p><strong>Role:</strong> Independent Travel Advisor & Team Leader</p>
+          <p><strong>Clients helped:</strong> Placeholder</p>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid #eef6f7" />
+
+          <h4>Contact</h4>
+          <p class="muted">Email: <a href="mailto:placeholder@example.com">placeholder@example.com</a></p>
+          <p class="muted">Social: <a href="#">Instagram (placeholder)</a> • <a href="#">Facebook (placeholder)</a></p>
+
+          <div style="margin-top:14px">
+            <button class="btn btn-primary" onclick="openCTA()">Learn more about the opportunity</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Opportunity section -->
+    <section id="opportunity" aria-labelledby="opportunity-title">
+      <div class="card">
+        <h3 id="opportunity-title">Why join my travel team?</h3>
+        <p class="muted">This is a business opportunity built for real life. Learn the practical steps to earn, support your family, and grow — with training tailored to beginners.</p>
+
+        <div class="benefits" role="list">
+          <div class="benefit" role="listitem">
+            <h4>Low start-up</h4>
+            <p class="muted">Affordable entry and tools provided. No prior travel industry experience required.</p>
+          </div>
+          <div class="benefit" role="listitem">
+            <h4>Proven systems</h4>
+            <p class="muted">Scripts, funnels, and templates to shorten your learning curve.</p>
+          </div>
+          <div class="benefit" role="listitem">
+            <h4>Mentorship</h4>
+            <p class="muted">Weekly coaching, peer groups, and one-to-one guidance.</p>
+          </div>
+        </div>
+
+        <h4 style="margin-top:14px">What members typically achieve</h4>
+        <ul>
+          <li>Extra monthly income within 1–3 months (varies)</li>
+          <li>Family travel discounts & credits</li>
+          <li>Personal growth — sales, marketing, and customer service skills</li>
+        </ul>
+
+        <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+          <button class="btn btn-primary" onclick="openCTA()">Learn more about the opportunity</button>
+          <button class="btn btn-ghost" onclick="scrollToSection('faq')">Read FAQ</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (placeholders) -->
+    <section aria-labelledby="testimonials-title">
+      <h3 id="testimonials-title">What others say</h3>
+      <div class="test-grid">
+        <div class="card">
+          <blockquote>
+            "Joining Katerina’s team transformed my evenings — I now contribute to our family income and still pick up the kids." <br/><span class="small muted">— Placeholder Name</span>
+          </blockquote>
+        </div>
+        <div class="card">
+          <blockquote>
+            "Supportive training and real tools — I booked my first client in 6 weeks." <br/><span class="small muted">— Placeholder Name</span>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="card">
+        <h3 id="faq-title">FAQ</h3>
+        <details>
+          <summary><strong>Do I need experience?</strong></summary>
+          <p class="muted">No — the training covers both product knowledge and how to find clients.</p>
+        </details>
+
+        <details>
+          <summary><strong>How much can I earn?</strong></summary>
+          <p class="muted">Earnings vary based on time invested and how actively you promote. Many start by topping up household income; others build it full-time.</p>
+        </details>
+
+        <details>
+          <summary><strong>Are there travel discounts?</strong></summary>
+          <p class="muted">Yes — team members and clients access exclusive member discounts and offers.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="card">
+        <h3 id="contact-title">Talk to me — next steps</h3>
+        <p class="muted">Book a quick, no-pressure chat to see if this opportunity fits your goals. Replace the placeholder email in the markup below with your real email.</p>
+
+        <!-- Contact form: This is a simple mailto fallback form. Replace action with your form handler (e.g., Formspree, Netlify forms) if you want server-side handling. -->
+        <form id="contact-form" onsubmit="handleFormSubmit(event)" novalidate>
+          <div class="form-row" style="margin-bottom:10px">
+            <div class="col">
+              <label class="small" for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="col">
+              <label class="small" for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <label class="small" for="interest">What interests you?</label>
+          <select id="interest" name="interest" style="margin-bottom:10px">
+            <option>Learn about joining the team</option>
+            <option>Travel discounts</option>
+            <option>Training & mentorship</option>
+            <option>Other</option>
+          </select>
+
+          <label class="small" for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me a little about your goals..." required></textarea>
+
+          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <button type="button" class="btn btn-ghost" onclick="mailtoFallback()">Email me instead</button>
+          </div>
+
+          <p id="form-note" class="small muted" style="margin-top:10px">
